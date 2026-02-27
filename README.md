@@ -1,3 +1,6 @@
+> [!NOTE]
+> This is a very rough draft of the end product. Issues and bugs are expected.
+
 # disorder
 Small Tera-based template scaffolding tool. 
 

@@ -74,5 +74,3 @@ default = 3000
 This project is licensed under either **MIT** or **Apache-2.0** Licenses, at your choice.
 
 See [MIT](LICENSE-MIT) and [Apache-2.0](LICENSE-APACHE) license files for details.
-
-Each release tarball contains a `THIRD_PARTY_LICENSES.html` file containing notices and acknowledgements of third party crates used in this project.

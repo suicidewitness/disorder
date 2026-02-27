@@ -7,6 +7,7 @@ use clap::{Parser, Subcommand};
 
 mod manifest;
 mod template;
+mod init;
 
 #[derive(Parser)]
 #[command(name = "templator", about = "Tera-based template scaffolder.")]
@@ -63,7 +64,13 @@ fn create(manifest_path: &str, input: &str, output: Option<String>) -> Result<()
 }
 
 fn init(output: &str) -> Result<()> {
-    todo!()
+    init::init(&PathBuf::from_str(output)?)?;
+
+    print!("\n");
+    println!("Successfully initialized the template!");
+    println!("Use `disorder create` to scaffold a project out of this template.");
+
+    Ok(())
 }
 
 fn main() -> Result<()> {

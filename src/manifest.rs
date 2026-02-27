@@ -1,8 +1,8 @@
 use inquire::{Confirm, Text};
 use anyhow::Result;
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Manifest {
     pub title: String,
     pub description: String,
@@ -54,7 +54,7 @@ impl Manifest {
     }
 }
 
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum ElementValue {
     Boolean(bool),
@@ -62,7 +62,7 @@ pub enum ElementValue {
     String(String),
 }
 
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Element {
     pub id: String,
     pub title: String,
